@@ -62,7 +62,7 @@ try:
             count = 0
             print(' intervalo de {} segundos'.format(count2interval))
             count2interval = random.randint(min_count2interval, max_count2interval)
-            time.sleep(randon.randint(min_interval, max_interval))
+            time.sleep(random.randint(min_interval, max_interval))
         else:
             time.sleep(random.randint(min_delay, max_delay))
         count += 1
