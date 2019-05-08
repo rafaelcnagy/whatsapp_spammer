@@ -6,8 +6,8 @@ import string
 
 contact_name = 'Pedro pontes'
 message = ['TRAGA MINHA BOLSINHA PORRA!!!!', 'se bloquear é puta', 'BORA MERMAO, DEVOLVE ESSA MERDA', 'se nao devolver amanha, seu pau vai cair', 'block = 50 conto!', 'while (pedro == gado)<br>   bot_active = true;', 'só traz essa porra, tamo junto man']
-min_delay = 30 #in seconds
-max_delay = 50 #in seconds
+min_delay = 10 #in seconds
+max_delay = 20 #in seconds
 min_interval = 480 #in seconds
 max_interval = 600 #in seconds
 min_count2interval = 100
