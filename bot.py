@@ -60,9 +60,10 @@ try:
         print(' --- Voce enviou a {}^a mensagem'.format(totalcount))
         if count > count2interval:
             count = 0
-            print(' intervalo de {} segundos'.format(count2interval))
+            interval = random.randint(min_interval, max_interval)
+            print(' intervalo de {} segundos'.format(interval))
             count2interval = random.randint(min_count2interval, max_count2interval)
-            time.sleep(random.randint(min_interval, max_interval))
+            time.sleep(interval)
         else:
             time.sleep(random.randint(min_delay, max_delay))
         count += 1
