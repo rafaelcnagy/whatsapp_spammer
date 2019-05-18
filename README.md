@@ -1,16 +1,13 @@
 # whatsapp_spammer
----
 
 This is the readme for a WhatsApp Bot, which automaticaly send messages to a contact in WhatsApp Web
 
----
 
 ## Requiriments
 * Python 3.6
 * pip
 * Selenium
 
----
 ## Installing Selenium
 ##### Install python package
 ```
@@ -24,7 +21,7 @@ https://github.com/mozilla/geckodriver/releases
 Unzip and copy geckodriver to folder */usr/bin* or */usr/local/bin*
 
 
----
+
 ## Setings
 This variables may be set:
 | variables                                 | description                         |
@@ -35,7 +32,7 @@ This variables may be set:
 | min_interval & max_interval               | big delay between messages          |
 | min_count2interval & min_count2interval   | count of messages for big delay     |
 
----
+
 ## Running
 
 - run bot.py
