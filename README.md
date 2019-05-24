@@ -24,8 +24,9 @@ Unzip and copy geckodriver to folder */usr/bin* or */usr/local/bin*
 
 ## Setings
 This variables may be set:
-| variables                                 | description                         |
-|-------------------------------------------|-------------------------------------|
+
+| variables        | description|
+| ------------- |--------------:|
 | contact_name                              | target contact's name in your phone |
 | messages                                  | array of messages to send           |
 | min_delay and max_delay                   | delay between messages              |
