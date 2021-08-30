@@ -1,17 +1,21 @@
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 import time
+import json
 import random
 import string
 
-contact_name = 'Pedro pontes'
-message = ['TRAGA MINHA BOLSINHA PORRA!!!!', 'se bloquear é puta', 'BORA MERMAO, DEVOLVE ESSA MERDA', 'se nao devolver amanha, seu pau vai cair', 'block = 50 conto!', 'while (pedro == gado)\r   bot_active = true;']
+with open('data.json', 'r', encoding='utf-8') as file:
+    data = json.load(file)
+    contact_name = data['contact']
+    messages = data['messages']
+
 min_delay = 100 #in seconds
 max_delay = 200 #in seconds
 min_interval = 480 #in seconds
 max_interval = 600 #in seconds
-min_count2interval = 20
-max_count2interval = 26
+min_count2interval = 20 #in seconds
+max_count2interval = 26 #in seconds
 
 browser = webdriver.Firefox()
 browser.get('https://web.whatsapp.com/')
@@ -31,7 +35,7 @@ print()
 
 print('Selecionando ' + contact_name)
 try:
-    elem = browser.find_element_by_class_name('jN-F5')
+    elem = browser.find_element_by_xpath('/html/body/div/div[1]/div[1]/div[3]/div/div[1]/div/label/div/div[2]')
 except NoSuchElementException:
     print('ALGO DEU ERRADO')
     exit()
@@ -41,7 +45,7 @@ print(contact_name + ' selecionado')
 
 
 try:
-    elem = browser.find_element_by_class_name('_2S1VP')
+    elem = browser.find_element_by_xpath('/html/body/div/div[1]/div[1]/div[4]/div[1]/footer/div[1]/div[2]/div/div[1]/div/div[2]')
 except NoSuchElementException:
     print('ALGO DEU ERRADO')
     exit()
@@ -49,11 +53,11 @@ except NoSuchElementException:
 totalcount = 1
 count = 0
 count2interval = random.randint(min_count2interval, max_count2interval)
-
+''
 try:
     while True:
-        elem = browser.find_element_by_class_name('_2S1VP')
-        elem.send_keys(random.choice(message) + Keys.RETURN)
+        elem = browser.find_element_by_xpath('/html/body/div/div[1]/div[1]/div[4]/div[1]/footer/div[1]/div[2]/div/div[1]/div/div[2]')
+        elem.send_keys(random.choice(messages) + Keys.RETURN)
         if count == count2interval/2:
             random_str = ''.join([random.choice(string.ascii_letters + string.digits) for n in range(25, 32)])
             elem.send_keys(random_str + Keys.RETURN)

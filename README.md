@@ -23,12 +23,16 @@ Unzip and copy geckodriver to folder */usr/bin* or */usr/local/bin*
 
 
 ## Setings
-This variables may be set:
+The `data.json` file contains the spawn contents, it must be defined:
 
 | variables        | description|
 | ------------- |--------------:|
 | contact_name                              | target contact's name in your phone |
-| messages                                  | array of messages to send           |
+| messages                                  | list of messages to send           |
+
+
+This variables define how the bot will work, you don't need change them:
+
 | min_delay and max_delay                   | delay between messages              |
 | min_interval & max_interval               | big delay between messages          |
 | min_count2interval & min_count2interval   | count of messages for big delay     |
@@ -38,7 +42,7 @@ This variables may be set:
 
 - run bot.py
     ```
-    python3.6 bot.py
+    python bot.py
     ```
 - wait firefox opens WhatsApp Web's page
 - login in WhatsApp Web
